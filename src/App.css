@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  background-color: #e0e0e0;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper {
+  max-width: 960px;
+  margin: auto;
+  padding: 30px 25px 0;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-form {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 12px;
+  height: 52px;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-form input {
+  flex: 1;
+  height: 100%;
+  font-size: 16px;
+  padding: 0 20px 0 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f9f9f9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-form input:focus {
+  border-color: #3C87FF;
+  background-color: #fff;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.priority-filter,
+.filters select {
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  padding: 0 14px;
+  min-width: 130px;
+  color: #333;
+}
+
+.priority-filter:focus,
+.filters select:focus {
+  border-color: #3C87FF;
+  background-color: #fff;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-item {
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.todo-item:hover {
+  background: #eaeaea;
+}
+
+.todo-item label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.todo-item label p {
+  font-size: 16px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.todo-item label p.checked {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-item-actions span {
+  font-size: 15px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.todo-item-actions span:hover {
+  color: #fff;
+  background-color: red;
+}
+
+.todo-stats {
+  padding: 18px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-top: 1px solid #eee;
 }
